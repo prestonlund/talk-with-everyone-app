@@ -3,23 +3,24 @@ import { Subscription } from "@/types/Subscription";
 
 export type LanguagesSupported =
   | "en"
+  | "es"
+  | "tl"
   | "de"
   | "fr"
-  | "es"
   | "hi"
   | "ja"
   | "la"
   | "ru"
   | "zh"
   | "ar"
-  | "pt"
-  | "tl";
+  | "pt";
 
 export const LanguagesSupportedMap: Record<LanguagesSupported, string> = {
   en: "English",
+  es: "Spanish",
+  tl: "Tagalog",
   de: "German",
   fr: "French",
-  es: "Spanish",
   hi: "Hindi",
   ja: "Japanese",
   la: "Latin",
@@ -27,10 +28,9 @@ export const LanguagesSupportedMap: Record<LanguagesSupported, string> = {
   zh: "Mandarin",
   ar: "Arabic",
   pt: "Portuguese",
-  tl: "Tagalog",
 };
 
-const LANGUAGES_IN_FREE = 2;
+const LANGUAGES_IN_FREE = 3;
 
 interface LanguageState {
   language: LanguagesSupported;
